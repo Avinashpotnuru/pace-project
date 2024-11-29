@@ -17,24 +17,7 @@ export const theme = createTheme({
       secondary: "#757575", // Medium gray for secondary text
     },
   },
-  typography: {
-    fontFamily: '"Roboto", sans-serif', // Default font family for MUI
-    h1: {
-      fontSize: "2.5rem", // Main header size
-      fontWeight: 700, // Bold for main headers
-    },
-    h2: {
-      fontSize: "2rem", // Slightly smaller header
-      fontWeight: 700,
-    },
-    body1: {
-      fontSize: "1rem", // Default body text size
-      lineHeight: 1.5, // Adjust line height for readability
-    },
-    button: {
-      textTransform: "none", // Buttons will not have uppercase transformation by default
-    },
-  },
+ 
   spacing: 8, // Default spacing unit for consistent margin/padding
   components: {
     MuiButton: {

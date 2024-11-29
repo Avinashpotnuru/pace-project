@@ -37,7 +37,7 @@ const Admission = () => {
   }, []);
 
   return (
-    <Box className="my-6  md:px-10 xl:px-36">
+    <Box className="my-6  md:px-8  xl:px-36">
       <h1 className="text-2xl font-extrabold text-center uppercase">
         admission 2025 – 27{" "}
       </h1>

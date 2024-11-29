@@ -3,3 +3,5 @@ export { default as Register } from "./Register";
 
 export { default as Admission } from "./Admission";
 export { default as OfferCard } from "./OfferCard";
+
+export { default as Footer } from "./Footer";
