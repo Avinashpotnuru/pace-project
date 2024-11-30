@@ -11,6 +11,7 @@ import {
   FormControlLabel,
   FormLabel,
   Grid,
+  Typography,
 } from "@mui/material";
 
 const RegistrationForm = () => {
@@ -28,18 +29,71 @@ const RegistrationForm = () => {
     referralCode: "",
   });
 
+  const [errors, setErrors] = useState({});
+
   const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    // Update form data
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value,
+      [name]: value,
+    });
+
+    // Clear error for the field being updated
+    setErrors({
+      ...errors,
+      [name]: "",
     });
   };
 
-  return (
-    <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">
-      <h2 className="text-2xl font-semibold mb-6">Quick Registration</h2>
+  const validate = () => {
+    const newErrors = {};
+    if (!formData.name.trim()) newErrors.name = "Name is required";
+    if (!/^\d{10}$/.test(formData.mobile))
+      newErrors.mobile = "Mobile number must be 10 digits";
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email))
+      newErrors.email = "Invalid email address";
+    if (!formData.city) newErrors.city = "Please select a city";
+    if (!formData.center) newErrors.center = "Please select a center";
+    if (!formData.mode) newErrors.mode = "Please select an exam mode";
+    if (!formData.examDate) newErrors.examDate = "Exam date is required";
+    if (!formData.school.trim()) newErrors.school = "School name is required";
+    if (!formData.currentClass)
+      newErrors.currentClass = "Please select a class";
+    return newErrors;
+  };
 
-      <form>
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newErrors = validate();
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+    } else {
+      alert("Form submitted successfully:", formData);
+      console.log("Form submitted successfully:", formData);
+      setFormData({
+        name: "",
+        mobile: "",
+        email: "",
+        city: "",
+        center: "",
+        mode: "",
+        examDate: "",
+        school: "",
+        currentClass: "",
+        achievement: "",
+        referralCode: "",
+      });
+
+      // Add submission logic (e.g., API call) here
+    }
+  };
+
+  return (
+    <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg  ">
+      <form onSubmit={handleSubmit}>
         <Grid container spacing={2}>
           {/* Name */}
           <Grid item xs={12}>
@@ -51,9 +105,11 @@ const RegistrationForm = () => {
               margin="normal"
               value={formData.name}
               onChange={handleChange}
+              error={!!errors.name}
+              helperText={errors.name}
               InputLabelProps={{
                 style: { fontWeight: "bold", fontSize: "1rem" },
-              }} // Bold label style for Name
+              }}
             />
           </Grid>
 
@@ -67,9 +123,11 @@ const RegistrationForm = () => {
               margin="normal"
               value={formData.mobile}
               onChange={handleChange}
+              error={!!errors.mobile}
+              helperText={errors.mobile}
               InputLabelProps={{
                 style: { fontWeight: "bold", fontSize: "1rem" },
-              }} // Bold label style for Mobile
+              }}
             />
           </Grid>
 
@@ -83,18 +141,18 @@ const RegistrationForm = () => {
               margin="normal"
               value={formData.email}
               onChange={handleChange}
+              error={!!errors.email}
+              helperText={errors.email}
               InputLabelProps={{
                 style: { fontWeight: "bold", fontSize: "1rem" },
-              }} // Bold label style for Email
+              }}
             />
           </Grid>
 
           {/* City */}
           <Grid item xs={12} sm={6}>
-            <FormControl fullWidth margin="normal">
-              <InputLabel
-                style={{ fontWeight: "bold", fontSize: "1rem" }} // Bold label style for City
-              >
+            <FormControl fullWidth margin="normal" error={!!errors.city}>
+              <InputLabel style={{ fontWeight: "bold", fontSize: "1rem" }}>
                 City
               </InputLabel>
               <Select
@@ -103,19 +161,22 @@ const RegistrationForm = () => {
                 onChange={handleChange}
                 label="City"
               >
-                <MenuItem value="Select City">Select City</MenuItem>
+                <MenuItem value="">Select City</MenuItem>
                 <MenuItem value="City 1">City 1</MenuItem>
                 <MenuItem value="City 2">City 2</MenuItem>
               </Select>
+              {errors.city && (
+                <Typography variant="caption" color="error">
+                  {errors.city}
+                </Typography>
+              )}
             </FormControl>
           </Grid>
 
           {/* Center */}
           <Grid item xs={12} sm={6}>
-            <FormControl fullWidth margin="normal">
-              <InputLabel
-                style={{ fontWeight: "bold", fontSize: "1rem" }} // Bold label style for Center
-              >
+            <FormControl fullWidth margin="normal" error={!!errors.center}>
+              <InputLabel style={{ fontWeight: "bold", fontSize: "1rem" }}>
                 Center
               </InputLabel>
               <Select
@@ -128,16 +189,17 @@ const RegistrationForm = () => {
                 <MenuItem value="Center 1">Center 1</MenuItem>
                 <MenuItem value="Center 2">Center 2</MenuItem>
               </Select>
+              {errors.center && (
+                <Typography variant="caption" color="error">
+                  {errors.center}
+                </Typography>
+              )}
             </FormControl>
           </Grid>
 
           {/* Mode of Exam */}
-          <Grid item xs={12}>
-            <FormLabel
-              component="legend"
-              className="block"
-              style={{ fontWeight: "bold" }}
-            >
+          <Grid item xs={12} sm={6}>
+            <FormLabel component="legend" style={{ fontWeight: "bold" }}>
               Mode of Exam
             </FormLabel>
             <RadioGroup
@@ -150,13 +212,20 @@ const RegistrationForm = () => {
                 value="Online"
                 control={<Radio />}
                 label="Online"
+                style={{ color: "black" }} // Ensure text is visible
               />
               <FormControlLabel
                 value="Offline"
                 control={<Radio />}
                 label="Offline"
+                style={{ color: "black" }} // Ensure text is visible
               />
             </RadioGroup>
+            {errors.mode && (
+              <Typography variant="caption" color="error">
+                {errors.mode}
+              </Typography>
+            )}
           </Grid>
 
           {/* Exam Date */}
@@ -170,23 +239,16 @@ const RegistrationForm = () => {
               margin="normal"
               value={formData.examDate}
               onChange={handleChange}
+              error={!!errors.examDate}
+              helperText={errors.examDate}
               InputLabelProps={{
                 shrink: true,
-                style: {
-                  fontWeight: "bold", // Bold label style
-                  fontSize: "1rem", // Label size
-                },
+                style: { fontWeight: "bold", fontSize: "1rem" },
               }}
-              InputProps={{
-                style: {
-                  paddingTop: "12px", // Adjust padding inside the input if needed
-                },
-              }}
-             // Ensures label stays above input
             />
           </Grid>
 
-          {/* School Name */}
+          {/* School */}
           <Grid item xs={12}>
             <TextField
               label="Enter your school name"
@@ -196,18 +258,22 @@ const RegistrationForm = () => {
               margin="normal"
               value={formData.school}
               onChange={handleChange}
+              error={!!errors.school}
+              helperText={errors.school}
               InputLabelProps={{
                 style: { fontWeight: "bold", fontSize: "1rem" },
-              }} // Bold label style for School Name
+              }}
             />
           </Grid>
 
           {/* Current Class */}
           <Grid item xs={12} sm={6}>
-            <FormControl fullWidth margin="normal">
-              <InputLabel
-                style={{ fontWeight: "bold", fontSize: "1rem" }} // Bold label style for Current Class
-              >
+            <FormControl
+              fullWidth
+              margin="normal"
+              error={!!errors.currentClass}
+            >
+              <InputLabel style={{ fontWeight: "bold", fontSize: "1rem" }}>
                 Current Class
               </InputLabel>
               <Select
@@ -220,15 +286,18 @@ const RegistrationForm = () => {
                 <MenuItem value="Class 1">Class 1</MenuItem>
                 <MenuItem value="Class 2">Class 2</MenuItem>
               </Select>
+              {errors.currentClass && (
+                <Typography variant="caption" color="error">
+                  {errors.currentClass}
+                </Typography>
+              )}
             </FormControl>
           </Grid>
 
           {/* Achievement */}
           <Grid item xs={12} sm={6}>
             <FormControl fullWidth margin="normal">
-              <InputLabel
-                style={{ fontWeight: "bold", fontSize: "1rem" }} // Bold label style for Achievement
-              >
+              <InputLabel style={{ fontWeight: "bold", fontSize: "1rem" }}>
                 Achievement (If any)
               </InputLabel>
               <Select
@@ -256,7 +325,7 @@ const RegistrationForm = () => {
               onChange={handleChange}
               InputLabelProps={{
                 style: { fontWeight: "bold", fontSize: "1rem" },
-              }} // Bold label style for Referral Code
+              }}
             />
           </Grid>
 
@@ -265,11 +334,16 @@ const RegistrationForm = () => {
             <Button
               variant="contained"
               color="primary"
-              fullWidth
-              className="mt-6"
               type="submit"
+              fullWidth
+              style={{
+                padding: "12px",
+                textTransform: "none",
+                fontWeight: "bold",
+                fontSize: "1rem",
+              }}
             >
-              Continue
+              continue
             </Button>
           </Grid>
         </Grid>

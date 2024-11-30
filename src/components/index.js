@@ -1,7 +1,9 @@
 export { default as Header } from "./Header";
 export { default as Register } from "./Register";
-
 export { default as Admission } from "./Admission";
 export { default as OfferCard } from "./OfferCard";
-
 export { default as Footer } from "./Footer";
+export { default as ScholarshipExam } from "./ScholarshipExam";
+export { default as AboutPace } from "./AboutPace";
+export { default as CourseDetails } from "./CourseDetails";
+export { default as OurAlumini } from "./OurAlumini";

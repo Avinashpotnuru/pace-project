@@ -1,15 +1,20 @@
 
 import { Box, Button} from "@mui/material";
-import { Admission, Footer, Header, Register } from "../../components";
+import { AboutPace, Admission, CourseDetails, Footer, Header, OurAlumini, Register, ScholarshipExam } from "../../components";
 import PersonIcon from "@mui/icons-material/Person";
+import CustomModal from "../../components/Criteria";
 const LandingPage = () => {
   return (
     <Box className="relative mb-40">
-      
       <Header />
       <Register />
       <Admission />
-      <Footer/>
+      <ScholarshipExam />
+      <AboutPace />
+      <CourseDetails />
+      <OurAlumini />
+      <Footer />
+      <CustomModal/>
       <Box
         sx={{
           position: "fixed", // Fixed position relative to the viewport
@@ -23,21 +28,17 @@ const LandingPage = () => {
           alignItems: "center", // Ensure button is above other elements
         }}
       >
-        <Box
-          gap={3}
-          spacing={2}
-          display="flex"
-          flexDirection={{ xs: "column", md: "row" }}
-        >
+        <Box gap={1} spacing={2} display="flex">
           <Button
+            href="#registration-section"
             endIcon={<PersonIcon />}
-            className="!bg-[#0813D0] !text-white flex items-center gap-3 !P-2 md:!p-3 lg:!p-5 !rounded-full !font-extrabold !uppercase tracking-tight text-[10px] "
+            className="!bg-[#0813D0] !text-white flex items-center lg:!p-3 lg:!px-3  !rounded-full !font-extrabold !uppercase tracking-tight !text-[10px] "
           >
             Register for Ace of Pace Now!
           </Button>
           <Button
-            
-            className="!bg-[#0813D0] !text-white flex items-center gap-3 !P-2 md:!p-3 lg:!p-5 !rounded-full !font-extrabold !uppercase tracking-tight text-[10px] "
+            href="#course-section"
+            className="!bg-[#0813D0] !text-white flex items-center   !rounded-full !font-extrabold !uppercase tracking-tight !text-[10px] "
           >
             course details
           </Button>

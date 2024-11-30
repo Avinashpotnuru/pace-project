@@ -1,0 +1,59 @@
+import { Box, Divider, Stack } from "@mui/material";
+
+import { scholarshipContent } from "../../data/scholarshipExam";
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import { useState } from "react";
+
+const ScholarshipExam = () => {
+  const [selectArrow, setSelectArrow] = useState(1);
+
+  const isSelected = (id) => {
+    return selectArrow === id;
+  };
+  return (
+    <Box className="px-5 md:px-10 lg:px-24 bg-[#fff8ee] py-7 lg:py-12">
+      <h1 className="font-normal text-sm lg:w-1/2">
+        Hurry! Final opportunity to maximize your scholarship with a limited
+        syllabus and join the best peer group. The syllabus expands in
+        November—this is your last chance to secure a higher scholarship with
+        reduced content. Don’t miss out, enroll now!
+      </h1>
+      <Box className="flex flex-col md:flex-row gap-2 py-5 md:gap-4 lg:gap-8">
+        <Box className="flex-1">
+          <Box>
+            {scholarshipContent.map((item) => (
+              <Box key={item.id}>
+                <Stack
+                  onClick={() => setSelectArrow(item.id)}
+                  direction="row"
+                  justifyContent="space-between"
+                >
+                  <h1
+                    className={`font-bold ${
+                      isSelected(item.id) ? "text-[#272727]" : "text-[#878787]"
+                    } `}
+                  >
+                    {item.content}
+                  </h1>
+                  {isSelected(item.id) && (
+                    <PlayArrowIcon className="text-[#FF8A4B]" />
+                  )}
+                </Stack>
+                <Divider sx={{ borderColor: "blue", marginY: 2 }} />
+              </Box>
+            ))}
+          </Box>
+        </Box>
+        <Box className="flex-1">
+          <img
+            className="w-full h-auto"
+            src={`../../../src/assets/scholarship/scholarShip${selectArrow}.jpg`}
+            alt="image"
+          />
+        </Box>
+      </Box>
+    </Box>
+  );
+};
+
+export default ScholarshipExam;

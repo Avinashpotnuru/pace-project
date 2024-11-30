@@ -1,35 +1,51 @@
-/* Universal Reset */
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    /* Ensures padding and borders don't affect element width/height */
-    margin: 0;
-    /* Removes default margins */
-    padding: 0;
-    /* Removes default padding */
-    border: 0;
-    /* Resets border styles */
-    font-family: inherit;
-    /* Inherit font-family from parent (so no unexpected fonts) */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: inherit;
+ 
 }
 
 .header-background {
-
-    background: linear-gradient(90deg, rgba(247, 239, 239, 1) 0%, rgba(255, 138, 75, 1) 100%) !important;
-    ;
-
+  background: linear-gradient(
+    90deg,
+    rgba(247, 239, 239, 1) 0%,
+    rgba(255, 138, 75, 1) 100%
+  ) !important;
 }
 
 .no-scrollbar {
-    overflow-x: scroll;
-    scrollbar-width: none;
-    /* For Firefox */
+  overflow-x: scroll;
+  scrollbar-width: none;
+  /* For Firefox */
 }
 
 .no-scrollbar::-webkit-scrollbar {
-    display: none;
-    /* For Chrome, Safari, and Edge */
+  display: none;
 }
 
-/* Optional: Reset specific elements' styles */
+.custom-carousel .control-dots {
+  position: absolute;
+  bottom: -20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.custom-carousel .control-dots .dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: #545454;
+}
+
+.custom-carousel .control-dots .dot.selected {
+  background-color: #0813d0;
+}
+
+.carousel.carousel-slider {
+  padding-bottom: 46px !important;
+}

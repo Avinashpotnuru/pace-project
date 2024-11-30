@@ -6,7 +6,7 @@ const OfferCard = ({index,activeIndex,cards,date,scholarship}) => {
   return (
     <Box
       key={index}
-      className="flex-shrink-0 snap-center flex flex-col items-center w-full p-6 bg-[#f7f7f7] rounded-lg shadow-lg"
+      className="flex-shrink-0 snap-center flex flex-col items-center w-full p-2 bg-[#f7f7f7] rounded-lg shadow-lg"
     >
       <Box className="h-[30%]  flex flex-col items-center space-y-3">
         <h1 className="text-2xl font-light">Admission period</h1>

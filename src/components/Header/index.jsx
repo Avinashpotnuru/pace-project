@@ -1,7 +1,7 @@
 import { AppBar, Button, Toolbar } from "@mui/material";
 
-import companyLogo from "../../assets/companyLogo.png";
 
+import companyLogo from "../../assets/companyLogo.png";
 const GradientAppBar = () => {
   return (
     <AppBar
