@@ -38,12 +38,14 @@ const Admission = () => {
 
   return (
     <Box className="my-6  md:px-8  xl:px-36">
-      <h1 className="text-2xl font-extrabold text-center uppercase">
-        admission 2025 – 27{" "}
-      </h1>
-      <h1 className="text-2xl font-extrabold text-center text-blue-600 uppercase">
-        scholarship criteria
-      </h1>
+      <Box className="py-3 lg:py-8 ">
+        <h1 className="text-2xl lg:text-3xl font-extrabold text-center uppercase">
+          admission 2025 – 27
+        </h1>
+        <h1 className="text-2xl lg:text-3xl font-extrabold text-center text-blue-600 uppercase">
+          scholarship criteria
+        </h1>
+      </Box>
       <Box className="flex flex-col items-center justify-center md:hidden">
         <Box className="relative w-full p-7 flex  justify-center items-center">
           {/* Arrow Left */}
@@ -88,7 +90,7 @@ const Admission = () => {
           />
         ))}
       </Box>
-      <h1 className="text-red-500 text-center px-5">
+      <h1 className="text-red-500 text-center p-5 lg:p-10">
         Note : Maximum criteria for online exams will be 15% less for each time
         period.
       </h1>

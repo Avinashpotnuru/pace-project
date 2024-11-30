@@ -5,7 +5,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import CustomModal from "../../components/Criteria";
 const LandingPage = () => {
   return (
-    <Box className="relative mb-40">
+    <Box className="relative mb-20">
       <Header />
       <Register />
       <Admission />

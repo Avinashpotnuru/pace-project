@@ -11,8 +11,8 @@ const ScholarshipExam = () => {
     return selectArrow === id;
   };
   return (
-    <Box className="px-5 md:px-10 lg:px-24 bg-[#fff8ee] py-7 lg:py-12">
-      <h1 className="font-normal text-sm lg:w-1/2">
+    <Box className="px-5 md:px-10 lg:px-28 bg-[#fff8ee]  py-14 lg:py-12">
+      <h1 className="font-normal lg:py-6 text-sm lg:w-1/2">
         Hurry! Final opportunity to maximize your scholarship with a limited
         syllabus and join the best peer group. The syllabus expands in
         November—this is your last chance to secure a higher scholarship with

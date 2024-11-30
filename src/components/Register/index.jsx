@@ -11,7 +11,7 @@ const Register = () => {
       id="registration-section"
       className="bg-registerBanner bg-cover bg-center min-h-screen w-full p-5 lg:p-10 flex flex-col lg:flex-row text-white gap-4 lg:gap-14"
     >
-      <Box className="flex-1 text-center lg:text-start space-y-5 lg:space-y-8 ">
+      <Box className="flex-1 text-center py-5 lg:py-10 lg:text-start space-y-5 lg:space-y-8 ">
         <h1 className="text-2xl lg:text-4xl font-bold uppercase">
           Scholarship Exams for <br />
           Classes 25-27:
@@ -52,8 +52,8 @@ const Register = () => {
           </Link>
         </Stack>
       </Box>
-      <Box className="flex-1 bg-white p-5 rounded-lg">
-        <Box className="flex flex-col  bg-orange-400 p-5 pt-5  lg:pb-15 rounded-lg">
+      <Box className="flex-1 bg-white p-2 md:p-5 rounded-lg">
+        <Box className="flex flex-col  bg-orange-400  p-2 md:p-5 pt-5  lg:pb-15 rounded-lg">
           <RegistrationForm />
         </Box>
       </Box>

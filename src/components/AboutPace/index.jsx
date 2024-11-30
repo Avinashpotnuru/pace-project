@@ -5,7 +5,7 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const AboutPace = () => {
   return (
-    <Box className="flex flex-col  lg:flex-row p-5 lg:p-10 gap-3 lg:gap-14 lg:px-14 ">
+    <Box className="flex flex-col  lg:flex-row  gap-3 lg:gap-14 px-5 md:px-10 lg:px-24 py-10 lg:py-14 ">
       <Box className="flex-1">
         <img src={aboutImage} className="w-full h-auto" alt="About Pace" />
       </Box>

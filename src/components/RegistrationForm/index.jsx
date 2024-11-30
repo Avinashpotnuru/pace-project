@@ -92,9 +92,9 @@ const RegistrationForm = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg  ">
+    <div className="max-w-2xl mx-auto p-2 md:p-6 bg-white rounded-lg shadow-lg  ">
       <form onSubmit={handleSubmit}>
-        <Grid container spacing={2}>
+        <Grid container spacing={1}>
           {/* Name */}
           <Grid item xs={12}>
             <TextField

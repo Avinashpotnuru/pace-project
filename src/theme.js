@@ -3,54 +3,54 @@ import { createTheme } from "@mui/material/styles";
 export const theme = createTheme({
   palette: {
     primary: {
-      main: "#ff8a4b", // Custom primary color
+      main: "#ff8a4b", 
     },
     secondary: {
-      main: "#ff4081", // Default secondary color
+      main: "#ff4081", 
     },
     background: {
-      default: "#fafafa", // Lighter default background color for better contrast
-      paper: "#ffffff", // Default paper background for cards, etc.
+      default: "#fafafa", 
+      paper: "#ffffff", 
     },
     text: {
-      primary: "#212121", // Dark gray for primary text for better readability
-      secondary: "#757575", // Medium gray for secondary text
+      primary: "#212121", 
+      secondary: "#757575", 
     },
   },
  
-  spacing: 8, // Default spacing unit for consistent margin/padding
+  spacing: 8,
   components: {
     MuiButton: {
       styleOverrides: {
         root: {
-          fontWeight: "normal", // Normal font weight for buttons
-          textTransform: "none", // Remove text transform from buttons
+          fontWeight: "normal", 
+          textTransform: "none", 
         },
       },
     },
     MuiTypography: {
       styleOverrides: {
         h1: {
-          fontWeight: 700, // Bold headings
+          fontWeight: 700, 
         },
         body1: {
-          lineHeight: "1.5", // Increase line height for body text for readability
+          lineHeight: "1.5", 
         },
       },
     },
     MuiInputLabel: {
       styleOverrides: {
         root: {
-          color: "black", // Set label color to black
-          fontWeight: "bold", // Make label text bold
+          color: "black", 
+          fontWeight: "bold", 
         },
       },
     },
     MuiFormLabel: {
       styleOverrides: {
         root: {
-          color: "black", // Set form label color to black
-          fontWeight: "bold", // Make form label text bold
+          color: "black", 
+          fontWeight: "bold", 
         },
       },
     },

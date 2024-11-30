@@ -7,7 +7,7 @@ const CourseDetails = () => {
     <>
       <Box
         id="course-section"
-        className=" flex flex-col  justify-center  items-center md:items-start lg:flex-row p-5 lg:p-10 gap-3 lg:gap-14 lg:px-14 bg-[#ff8a4b] "
+        className=" flex flex-col  justify-center  items-center md:items-start lg:flex-row p-5 pb-10 lg:p-10 gap-3 lg:gap-14 lg:px-14 bg-[#ff8a4b] "
       >
         <Box>
           <h1 className="text-2xl lg:text-4xl font-bold uppercase text-white text-center md:text-left">
@@ -52,7 +52,7 @@ const CourseDetails = () => {
         </Box>
       </Box>
       <Box className="bg-[#551E00]">
-        <h1 className="text-sm lg:text-2xl font-normal  text-white md:text-center text-left p-5 lg:p-10">
+        <h1 className="text-sm lg:text-2xl font-normal  text-white md:text-center text-left p-5 lg:p-10 lg:px-20">
           T&C – Students who have appeared for the online scholarship exam and
           have qualified for scholarships will be called for an interview by
           faculty at their respective centers.
