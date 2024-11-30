@@ -1,17 +1,32 @@
 import { Box, Divider, Stack } from "@mui/material";
-
 import { scholarshipContent } from "../../data/scholarshipExam";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import { useState } from "react";
 
+
+import scholarship1 from "../../assets/scholarship/scholarShip1.jpg";
+import scholarship2 from "../../assets/scholarship/scholarShip2.jpg";
+import scholarship3 from "../../assets/scholarship/scholarShip3.jpg";
+import scholarship4 from "../../assets/scholarship/scholarShip4.jpg";
+import scholarship5 from "../../assets/scholarship/scholarShip5.jpg";
+
 const ScholarshipExam = () => {
   const [selectArrow, setSelectArrow] = useState(1);
+
+  const images = [
+    scholarship1,
+    scholarship2,
+    scholarship3,
+    scholarship4,
+    scholarship5,
+  ];
 
   const isSelected = (id) => {
     return selectArrow === id;
   };
+
   return (
-    <Box className="px-5 md:px-10 lg:px-28 bg-[#fff8ee]  py-14 lg:py-12">
+    <Box className="px-5 md:px-10 lg:px-28 bg-[#fff8ee] py-14 lg:py-12">
       <h1 className="font-normal lg:py-6 text-sm lg:w-1/2">
         Hurry! Final opportunity to maximize your scholarship with a limited
         syllabus and join the best peer group. The syllabus expands in
@@ -31,7 +46,7 @@ const ScholarshipExam = () => {
                   <h1
                     className={`font-bold ${
                       isSelected(item.id) ? "text-[#272727]" : "text-[#878787]"
-                    } `}
+                    }`}
                   >
                     {item.content}
                   </h1>
@@ -47,8 +62,8 @@ const ScholarshipExam = () => {
         <Box className="flex-1">
           <img
             className="w-full h-auto"
-            src={`../../../src/assets/scholarship/scholarShip${selectArrow}.jpg`}
-            alt="image"
+            src={images[selectArrow - 1]} // Use the correct image index
+            alt="Scholarship"
           />
         </Box>
       </Box>
