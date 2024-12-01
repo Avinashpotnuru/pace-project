@@ -62,7 +62,7 @@ const ScholarshipExam = () => {
         <Box className="flex-1">
           <img
             className="w-full h-auto"
-            src={images[selectArrow - 1]} // Use the correct image index
+            src={images[selectArrow - 1]} 
             alt="Scholarship"
           />
         </Box>

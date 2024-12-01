@@ -23,7 +23,7 @@ const ImageModal = () => {
       maxWidth="sm"
       sx={{
         "& .MuiDialog-paper": {
-          overflowY: "visible", // Override the overflow-y style here
+          overflowY: "visible", 
         },
       }}
     >
@@ -35,11 +35,11 @@ const ImageModal = () => {
           right: -20,
           top: -20,
           zIndex: 1,
-          color: "white", // icon color
-          border: "2px solid white", // white border
-          backgroundColor: "rgba(0, 0, 0, 0.4)", // light black background with some transparency
+          color: "white", 
+          border: "2px solid white", 
+          backgroundColor: "rgba(0, 0, 0, 0.4)", 
           "&:hover": {
-            backgroundColor: "rgba(0, 0, 0, 0.6)", // darkens on hover
+            backgroundColor: "rgba(0, 0, 0, 0.6)", 
           },
         }}
       >

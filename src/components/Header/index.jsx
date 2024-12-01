@@ -8,8 +8,8 @@ const GradientAppBar = () => {
       position="static"
       className="header-background px-5 py-2"
       sx={{
-        // Gradient without percentage
-        boxShadow: "none", // Remove default shadow
+       
+        boxShadow: "none", 
       }}
     >
       <Toolbar className="flex items-center justify-between">

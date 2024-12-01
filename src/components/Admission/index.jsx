@@ -48,7 +48,7 @@ const Admission = () => {
       </Box>
       <Box className="flex flex-col items-center justify-center md:hidden">
         <Box className="relative w-full p-7 flex  justify-center items-center">
-          {/* Arrow Left */}
+         
           <IconButton
             onClick={() => scroll("left")}
             className="absolute top-1/2 -left-6 transform -translate-y-1/2 z-10 bg-white shadow-lg sm:-left-10 lg:hidden"
@@ -56,7 +56,7 @@ const Admission = () => {
             <ArrowBackIos />
           </IconButton>
 
-          {/* Card Container */}
+        
           <Box
             ref={scrollRef}
             className="flex  overflow-x-scroll lg:overflow-auto snap-x snap-mandatory scroll-smooth no-scrollbar"
@@ -71,7 +71,7 @@ const Admission = () => {
             ))}
           </Box>
 
-          {/* Arrow Right */}
+         
           <IconButton
             onClick={() => scroll("right")}
             className="absolute top-1/2 -right-6 transform -translate-y-1/2 z-10 bg-white shadow-lg sm:-right-10 lg:hidden"

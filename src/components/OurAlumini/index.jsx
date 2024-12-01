@@ -9,15 +9,14 @@ const OurAlumini = () => {
     (_, i) => `../../../src/assets/team/team${i + 1}.png`
   );
 
-  // Split images into chunks of 4
+ 
   const chunkSize = 4;
   const chunks = [];
   for (let i = 0; i < images.length; i += chunkSize) {
     chunks.push(images.slice(i, i + chunkSize));
   }
 
-  // Custom render function for the carousel dots (indicators)
-  const renderIndicator = (onClickHandler, isSelected, index, label) => {
+   const renderIndicator = (onClickHandler, isSelected, index, label) => {
     return (
       <li
         className={`inline-block w-3 h-3 mx-1 rounded-full cursor-pointer ${

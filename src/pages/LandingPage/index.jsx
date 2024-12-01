@@ -17,15 +17,15 @@ const LandingPage = () => {
       <CustomModal/>
       <Box
         sx={{
-          position: "fixed", // Fixed position relative to the viewport
-          bottom: "16px", // Distance from the bottom
-          left: "50%", // Position from the left (centered)
-          transform: "translateX(-50%)", // Offset to truly center it
+          position: "fixed", 
+          bottom: "16px", 
+          left: "50%", 
+          transform: "translateX(-50%)", 
           zIndex: 1000,
           width: "100%",
           display: "flex",
           justifyContent: "center",
-          alignItems: "center", // Ensure button is above other elements
+          alignItems: "center",
         }}
       >
         <Box gap={1} spacing={2} display="flex">

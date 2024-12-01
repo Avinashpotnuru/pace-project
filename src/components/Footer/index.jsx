@@ -12,8 +12,8 @@ const Footer = () => {
       </Box>
       <Divider
         sx={{
-          borderTop: "1px dashed red", // Set dashed style and red color
-          marginY: 2, // Add vertical margin if needed
+          borderTop: "1px dashed red", 
+          marginY: 2, 
         }}
       />
       <h1 className="text-black">

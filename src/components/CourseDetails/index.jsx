@@ -16,9 +16,9 @@ const CourseDetails = () => {
           </h1>
           <Divider
             sx={{
-              borderTop: "1px dashed white", // Set dashed style and red color
+              borderTop: "1px dashed white", 
               marginY: 2,
-              width: "50%", // Add vertical margin if needed
+              width: "50%",
             }}
           />
           <Box>

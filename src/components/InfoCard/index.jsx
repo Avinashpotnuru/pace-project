@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Box } from "@mui/material";
 
-// Importing images dynamically based on the `id`
+
 import info1 from "../../../src/assets/info/info1.png";
 import info2 from "../../../src/assets/info/info2.png";
 import info3 from "../../../src/assets/info/info3.png";

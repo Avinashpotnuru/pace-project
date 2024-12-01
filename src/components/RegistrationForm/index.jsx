@@ -34,13 +34,11 @@ const RegistrationForm = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    // Update form data
     setFormData({
       ...formData,
       [name]: value,
     });
 
-    // Clear error for the field being updated
     setErrors({
       ...errors,
       [name]: "",
@@ -86,8 +84,6 @@ const RegistrationForm = () => {
         achievement: "",
         referralCode: "",
       });
-
-      // Add submission logic (e.g., API call) here
     }
   };
 
@@ -95,7 +91,6 @@ const RegistrationForm = () => {
     <div className="max-w-2xl mx-auto p-2 md:p-6 bg-white rounded-lg shadow-lg  ">
       <form onSubmit={handleSubmit}>
         <Grid container spacing={1}>
-          {/* Name */}
           <Grid item xs={12}>
             <TextField
               label="Name"
@@ -113,7 +108,6 @@ const RegistrationForm = () => {
             />
           </Grid>
 
-          {/* Mobile */}
           <Grid item xs={12} sm={6}>
             <TextField
               label="Mobile"
@@ -131,7 +125,6 @@ const RegistrationForm = () => {
             />
           </Grid>
 
-          {/* Email */}
           <Grid item xs={12} sm={6}>
             <TextField
               label="Email"
@@ -149,7 +142,6 @@ const RegistrationForm = () => {
             />
           </Grid>
 
-          {/* City */}
           <Grid item xs={12} sm={6}>
             <FormControl fullWidth margin="normal" error={!!errors.city}>
               <InputLabel style={{ fontWeight: "bold", fontSize: "1rem" }}>
@@ -173,7 +165,6 @@ const RegistrationForm = () => {
             </FormControl>
           </Grid>
 
-          {/* Center */}
           <Grid item xs={12} sm={6}>
             <FormControl fullWidth margin="normal" error={!!errors.center}>
               <InputLabel style={{ fontWeight: "bold", fontSize: "1rem" }}>
@@ -197,7 +188,6 @@ const RegistrationForm = () => {
             </FormControl>
           </Grid>
 
-          {/* Mode of Exam */}
           <Grid item xs={12} sm={6}>
             <FormLabel component="legend" style={{ fontWeight: "bold" }}>
               Mode of Exam
@@ -228,7 +218,6 @@ const RegistrationForm = () => {
             )}
           </Grid>
 
-          {/* Exam Date */}
           <Grid item xs={12} sm={6}>
             <TextField
               label="Exam Date"
@@ -248,7 +237,6 @@ const RegistrationForm = () => {
             />
           </Grid>
 
-          {/* School */}
           <Grid item xs={12}>
             <TextField
               label="Enter your school name"
@@ -266,7 +254,6 @@ const RegistrationForm = () => {
             />
           </Grid>
 
-          {/* Current Class */}
           <Grid item xs={12} sm={6}>
             <FormControl
               fullWidth
@@ -294,7 +281,6 @@ const RegistrationForm = () => {
             </FormControl>
           </Grid>
 
-          {/* Achievement */}
           <Grid item xs={12} sm={6}>
             <FormControl fullWidth margin="normal">
               <InputLabel style={{ fontWeight: "bold", fontSize: "1rem" }}>
@@ -313,7 +299,6 @@ const RegistrationForm = () => {
             </FormControl>
           </Grid>
 
-          {/* Referral Code */}
           <Grid item xs={12}>
             <TextField
               label="Referral Code (Optional)"
@@ -329,7 +314,6 @@ const RegistrationForm = () => {
             />
           </Grid>
 
-          {/* Submit Button */}
           <Grid item xs={12}>
             <Button
               variant="contained"
