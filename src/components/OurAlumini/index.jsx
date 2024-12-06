@@ -4,10 +4,10 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 
 const OurAlumini = () => {
-  const images = Array.from(
-    { length: 15 },
-    (_, i) => `../../../src/assets/team/team${i + 1}.png`
+  const images = Object.values(
+    import.meta.glob("../../assets/team/*.png", { eager: true, as: "url" })
   );
+
 
  
   const chunkSize = 4;
