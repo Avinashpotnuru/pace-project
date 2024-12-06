@@ -9,18 +9,21 @@ const CourseDetails = () => {
         id="course-section"
         className=" flex flex-col  justify-center  items-center md:items-start lg:flex-row p-5 pb-10 lg:p-10 gap-3 lg:gap-14 lg:px-14 bg-[#ff8a4b] "
       >
-        <Box>
-          <h1 className="text-2xl lg:text-4xl font-bold uppercase text-white text-center md:text-left">
-            NEET <br />
-            course details
-          </h1>
-          <Divider
-            sx={{
-              borderTop: "1px dashed white", 
-              marginY: 2,
-              width: "50%",
-            }}
-          />
+        <Box className="">
+          <Box className="text-center m-auto  flex flex-col items-center md:items-start">
+            <h1 className="text-2xl lg:text-4xl font-bold uppercase text-white text-center md:text-left">
+              NEET <br />
+              course details
+            </h1>
+            <Divider
+              sx={{
+                borderTop: "1px dashed white",
+                marginY: 2,
+                width: "50%",
+              }}
+            />
+          </Box>
+
           <Box>
             <h1 className="text-sm lg:text-2xl font-bold uppercase text-black text-center md:text-left italic">
               Eligibility

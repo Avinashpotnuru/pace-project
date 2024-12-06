@@ -34,16 +34,16 @@ const OurAlumini = () => {
 
   return (
     <>
-      <Box className="md:flex flex-col items-center text-[#545454] p-5 lg:p-10 space-y-3 lg:space-y-5 text-center hidden">
+      <Box className="flex flex-col items-center text-[#545454] p-5 lg:p-10 space-y-3 lg:space-y-5 text-center ">
         <h1 className="text-2xl lg:text-4xl font-bold uppercase">
           Our Alumini
         </h1>
-        <h1>
+        <h1 className="text-base lg:text-lg ">
           PACE is proud of its alumni in leading conglomerates like Google,
           Facebook, Twitter, LinkedIn, Tesla, McKinsey and many more across the
           globe.
         </h1>
-        <img src={ourTeam} alt="Our Team" />
+        <img className="w-full h-auto hidden md:block" src={ourTeam} alt="Our Team" />
       </Box>
 
       <Box className="p-5 md:hidden">
