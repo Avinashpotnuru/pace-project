@@ -27,13 +27,13 @@ const ScholarshipExam = () => {
 
   return (
     <Box className="px-5 md:px-10 lg:px-28 bg-[#fff8ee] py-14 lg:py-12">
-      <h1 className="font-normal lg:py-6 text-sm lg:w-1/2">
+      <h1 className="text-sm font-normal lg:py-6 lg:w-1/2">
         Hurry! Final opportunity to maximize your scholarship with a limited
         syllabus and join the best peer group. The syllabus expands in
         November—this is your last chance to secure a higher scholarship with
         reduced content. Don’t miss out, enroll now!
       </h1>
-      <Box className="flex flex-col md:flex-row gap-2 py-5 md:gap-4 lg:gap-8">
+      <Box className="flex flex-col gap-2 py-5 md:flex-row md:gap-4 lg:gap-8 ">
         <Box className="flex-1">
           <Box>
             {scholarshipContent.map((item) => (
@@ -62,7 +62,7 @@ const ScholarshipExam = () => {
         <Box className="flex-1">
           <img
             className="w-full h-auto"
-            src={images[selectArrow - 1]} 
+            src={images[selectArrow - 1]}
             alt="Scholarship"
           />
         </Box>

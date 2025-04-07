@@ -6,6 +6,7 @@
   padding: 0;
   border: 0;
   font-family: inherit;
+  scroll-behavior: smooth;
 
 }
 
@@ -69,7 +70,7 @@
 }
 
 .text-gradient2 {
- 
+
   background: linear-gradient(183.78deg, #000670 27.31%, #3E1600 77.33%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

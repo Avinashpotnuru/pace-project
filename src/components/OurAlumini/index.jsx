@@ -35,7 +35,7 @@ const OurAlumini = () => {
   return (
     <>
       <Box className="flex flex-col items-center text-[#545454] p-5 lg:p-10 space-y-3 lg:space-y-5 text-center ">
-        <h1 className="text-2xl lg:text-4xl font-bold uppercase">
+        <h1 className="text-2xl font-bold uppercase lg:text-4xl">
           Our Alumini
         </h1>
         <h1 className="text-base lg:text-lg ">
@@ -43,7 +43,7 @@ const OurAlumini = () => {
           Facebook, Twitter, LinkedIn, Tesla, McKinsey and many more across the
           globe.
         </h1>
-        <img className="w-full h-auto hidden md:block" src={ourTeam} alt="Our Team" />
+        <img className="hidden w-full h-auto md:block" src={ourTeam} alt="Our Team" />
       </Box>
 
       <Box className="p-5 md:hidden">
@@ -57,14 +57,14 @@ const OurAlumini = () => {
           {chunks.map((chunk, index) => (
             <div
               key={index}
-              className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4"
+              className="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-4"
             >
               {chunk.map((image, imgIndex) => (
-                <div key={imgIndex} className="bg-white p-2 shadow rounded">
+                <div key={imgIndex} className="p-2 bg-white rounded shadow">
                   <img
                     src={image}
                     alt={`Image ${imgIndex + 1}`}
-                    className="rounded w-full"
+                    className="w-full rounded"
                   />
                 </div>
               ))}

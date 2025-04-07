@@ -6,7 +6,7 @@ const GradientAppBar = () => {
   return (
     <AppBar
       position="static"
-      className="header-background px-5 py-2"
+      className="px-5 py-2 header-background"
       sx={{
        
         boxShadow: "none", 

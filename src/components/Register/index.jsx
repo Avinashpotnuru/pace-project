@@ -9,14 +9,14 @@ const Register = () => {
   return (
     <Box
       id="registration-section"
-      className="bg-registerBanner bg-cover bg-center min-h-screen w-full p-5 lg:p-10 flex flex-col lg:flex-row text-white gap-4 lg:gap-14"
+      className="flex flex-col w-full min-h-screen gap-4 p-5 text-white bg-center bg-cover bg-registerBanner lg:p-10 lg:flex-row lg:gap-14"
     >
-      <Box className="flex-1 text-center py-5 lg:py-10 lg:text-start space-y-5 lg:space-y-8 ">
-        <h1 className="text-2xl lg:text-4xl font-bold uppercase">
+      <Box className="flex-1 py-5 space-y-5 text-center lg:py-10 lg:text-start lg:space-y-8 ">
+        <h1 className="text-2xl font-bold uppercase lg:text-4xl">
           Scholarship Exams for <br />
           Classes 25-27:
         </h1>
-        <h1 className="text-2xl lg:text-4xl font-bold uppercase text-yellow-400">
+        <h1 className="text-2xl font-bold text-yellow-400 uppercase lg:text-4xl">
           Register Yourself now!
         </h1>
 
@@ -26,7 +26,7 @@ const Register = () => {
           opportunity to join the best JEE/NEET/Foundation classes in Pune!
         </h1>
 
-        <Box className="lg:grid grid-cols-4 text-white hidden  gap-2">
+        <Box className="hidden grid-cols-4 gap-2 text-white lg:grid">
           {infoContent.map((item) => (
             <InfoCard id={item.id} content={item.content} key={item.id} />
           ))}
@@ -52,8 +52,8 @@ const Register = () => {
           </Link>
         </Stack>
       </Box>
-      <Box className="flex-1 bg-white p-2 md:p-5 rounded-lg">
-        <Box className="flex flex-col  bg-orange-400  p-2 md:p-5 pt-5  lg:pb-15 rounded-lg">
+      <Box className="flex-1 p-2 bg-white rounded-lg md:p-5">
+        <Box className="flex flex-col p-2 pt-5 bg-orange-400 rounded-lg md:p-5 lg:pb-15">
           <RegistrationForm />
         </Box>
       </Box>

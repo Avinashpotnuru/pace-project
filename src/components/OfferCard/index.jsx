@@ -13,7 +13,7 @@ const OfferCard = ({activeIndex,cards,date,scholarship,id}) => {
         <Divider sx={{ borderColor: "#FF8A4B", width: "100%" }} />
         <h1 className="text-xl font-semibold uppercase">{date}</h1>
       </Box>
-      <Box className="  bg-rounded-lg shadow-lg p-2 h-64 flex flex-col items-center justify-around w-full bg-[#FF8A4B] rounded-lg ">
+      <Box className=" bg-rounded-lg shadow-lg p-2 h-64 flex flex-col items-center justify-around w-full bg-[#FF8A4B] rounded-lg ">
         <h1 className="text-xl font-light uppercase">scholarship upto</h1>
         <h1
           className={`text-5xl  font-extrabold uppercase  ${
@@ -23,7 +23,7 @@ const OfferCard = ({activeIndex,cards,date,scholarship,id}) => {
           {scholarship}
         </h1>
         <h1 className="text-xl font-light uppercase">on tuition fee</h1>
-        <Box className="flex space-x-2 mt-4 md:hidden ">
+        <Box className="flex mt-4 space-x-2 md:hidden ">
           {cards.map((_, index) => (
             <Box
               key={index}

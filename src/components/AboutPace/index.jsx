@@ -5,13 +5,13 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const AboutPace = () => {
   return (
-    <Box className="flex flex-col  lg:flex-row  gap-3 lg:gap-14 px-5 md:px-10 lg:px-24 py-10 lg:py-14 ">
+    <Box className="flex flex-col gap-3 px-5 py-10 lg:flex-row lg:gap-14 md:px-10 lg:px-24 lg:py-14 ">
       <Box className="flex-1">
         <img src={aboutImage} className="w-full h-auto" alt="About Pace" />
       </Box>
       <Box className="flex-1 space-y-3 lg:space-y-5">
-        <h1 className="text-2xl lg:text-4xl font-bold uppercase">About</h1>
-        <h1 className="text-2xl lg:text-4xl font-bold uppercase text-blue-800">
+        <h1 className="text-2xl font-bold uppercase lg:text-4xl">About</h1>
+        <h1 className="text-2xl font-bold text-blue-800 uppercase lg:text-4xl">
           PACE IIT & Medical
         </h1>
         <h1>

@@ -19,7 +19,7 @@ const InfoCard = ({ content, id }) => {
   };
 
   return (
-    <Box className="flex flex-col gap-2 items-center bg-white p-5 text-gray-800">
+    <Box className="flex flex-col items-center gap-2 p-5 text-gray-800 bg-white">
       <img
         height={50}
         width={50}
@@ -27,7 +27,7 @@ const InfoCard = ({ content, id }) => {
         alt={content}
       />
 
-      <h1 className="uppercase text-center font-extrabold">{content}</h1>
+      <h1 className="font-extrabold text-center uppercase">{content}</h1>
     </Box>
   );
 };

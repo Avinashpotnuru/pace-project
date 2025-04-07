@@ -10,8 +10,8 @@ const CourseDetails = () => {
         className=" flex flex-col  justify-center  items-center md:items-start lg:flex-row p-5 pb-10 lg:p-10 gap-3 lg:gap-14 lg:px-14 bg-[#ff8a4b] "
       >
         <Box className="">
-          <Box className="text-center m-auto  flex flex-col items-center md:items-start">
-            <h1 className="text-2xl lg:text-4xl font-bold uppercase text-white text-center md:text-left">
+          <Box className="flex flex-col items-center m-auto text-center md:items-start">
+            <h1 className="text-2xl font-bold text-center text-white uppercase lg:text-4xl md:text-left">
               NEET <br />
               course details
             </h1>
@@ -25,10 +25,10 @@ const CourseDetails = () => {
           </Box>
 
           <Box>
-            <h1 className="text-sm lg:text-2xl font-bold uppercase text-black text-center md:text-left italic">
+            <h1 className="text-sm italic font-bold text-center text-black uppercase lg:text-2xl md:text-left">
               Eligibility
             </h1>
-            <h1 className="text-xl lg:text-3xl font-extrabold uppercase text-white text-center md:text-left">
+            <h1 className="text-xl font-extrabold text-center text-white uppercase lg:text-3xl md:text-left">
               Students studying in class <br />{" "}
               <span className="text-black">6th, 7th, 8th, 9th or 10th</span>
             </h1>
@@ -46,7 +46,7 @@ const CourseDetails = () => {
           flexItem
         />
 
-        <Box className="flex-1 space-y-3 lg:space-y-5 bg-white p-5 md:p-8 rounded-lg m-auto">
+        <Box className="flex-1 p-5 m-auto space-y-3 bg-white rounded-lg lg:space-y-5 md:p-8">
           {courseDetailsContent.map((item) => (
             <h1 key={item.id} className="text-black">
               {item.title}
@@ -55,7 +55,7 @@ const CourseDetails = () => {
         </Box>
       </Box>
       <Box className="bg-[#551E00]">
-        <h1 className="text-sm lg:text-2xl font-normal  text-white md:text-center text-left p-5 lg:p-10 lg:px-20">
+        <h1 className="p-5 text-sm font-normal text-left text-white lg:text-2xl md:text-center lg:p-10 lg:px-20">
           T&C – Students who have appeared for the online scholarship exam and
           have qualified for scholarships will be called for an interview by
           faculty at their respective centers.
